@@ -77,6 +77,10 @@ def download_release():
 
 
 def main():
+    if not WORKSPACE_DIR.is_dir():
+        print(f"Skipping setup, workspace does not exist: {WORKSPACE_DIR}")
+        return
+
     download_release()
 
 
