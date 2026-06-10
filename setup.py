@@ -3,7 +3,6 @@ import os
 import subprocess
 from pathlib import PosixPath
 
-
 TARGET_RELEASE = "v1.2.0"
 WORKSPACE_DIR = PosixPath("/workspace")
 
@@ -77,16 +76,8 @@ def download_release():
         os.remove("/tmp/conf.tar.gz")
 
 
-def appease_poetry():
-    # Poetry expects a Python package from `setup.py install`, create a minimal one
-    package_dir = PosixPath("/workspace/cluebotng_core")
-    package_dir.mkdir(parents=True)
-    (package_dir / "__init__.py").open("w").close()
-
-
 def main():
     download_release()
-    appease_poetry()
 
 
 if __name__ == "__main__":
