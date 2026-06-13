@@ -3,7 +3,7 @@ import os
 import subprocess
 from pathlib import PosixPath
 
-TARGET_RELEASE = "v1.2.0"
+TARGET_RELEASE = "v1.5.0"
 WORKSPACE_DIR = PosixPath("/workspace")
 
 
