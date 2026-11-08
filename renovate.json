@@ -17,5 +17,15 @@
       "matchManagers": ["poetry", "pep621", "pip_requirements", "pyenv"],
       "groupName": "Python dependencies"
     }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update ClueBot NG core release in setup.py",
+      "managerFilePatterns": ["/^setup\\.py$/"],
+      "matchStrings": ["TARGET_RELEASE = \"(?<currentValue>[^\"]+)\""],
+      "depNameTemplate": "cluebotng/core",
+      "datasourceTemplate": "github-releases"
+    }
   ]
 }
