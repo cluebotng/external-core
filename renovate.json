@@ -27,5 +27,8 @@
       "depNameTemplate": "cluebotng/core",
       "datasourceTemplate": "github-releases"
     }
-  ]
+  ],
+  "lockFileMaintenance": {
+    "enabled": true
+  }
 }
